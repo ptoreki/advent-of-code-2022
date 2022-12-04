@@ -1,7 +1,7 @@
 const fs = require("fs");
 let score = 0;
 
-fs.readFile("test.txt", "utf-8", (err, data) => {
+fs.readFile("input.txt", "utf-8", (err, data) => {
     if(err) {console.log(err);
         return
     }
