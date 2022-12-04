@@ -4,11 +4,12 @@ fs.readFile("input.txt", "utf-8", (err, data) => {
     if(err) {console.log(err);
         return
     }
+    //Part1
     const groupedData = data.split( "\n\n" ).map( group => {
         return group.split("\n").reduce((partialSum, a) => partialSum + parseInt(a), 0)
     })
     console.log(Math.max(...groupedData))
-
+    //Part2
     function compareNumbers(a, b) {
         return b - a;
     } 

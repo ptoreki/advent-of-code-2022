@@ -1,5 +1,5 @@
 const fs = require("fs");
-
+//Part 1
 const resultMapping = {
     "A X" : 4,
     "A Y" : 8,
@@ -13,7 +13,7 @@ const resultMapping = {
     "C Y" : 2,
     "C Z" : 6
 }
-
+//Part 2
 const secondResultMapping = {
     "A X" : 3,
     "A Y" : 4,
@@ -31,10 +31,10 @@ const secondResultMapping = {
 fs.readFile("input.txt", "utf-8", (err, data) => {
     if(err) {console.log(err);
         return
-    }
+    } //Part 1
     const roundData = data.split("\n").map( round => {
         return resultMapping[round]
-    })
+    })//Part 2
     const secondRoundData = data.split("\n").map( round => {
         return secondResultMapping[round]
     })
