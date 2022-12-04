@@ -30,13 +30,14 @@ const secondResultMapping = {
 
 fs.readFile("input.txt", "utf-8", (err, data) => {
     if(err) {console.log(err);
-        return}
-        const roundData = data.split("\n").map( round => {
-            return resultMapping[round]
-        })
-        const secondRoundData = data.split("\n").map( round => {
-            return secondResultMapping[round]
-        })
-        console.log(roundData.reduce((partialSum, a) => partialSum + a, 0))
-        console.log(secondRoundData.reduce((partialSum, a) => partialSum + a, 0))
-    });
+        return
+    }
+    const roundData = data.split("\n").map( round => {
+        return resultMapping[round]
+    })
+    const secondRoundData = data.split("\n").map( round => {
+        return secondResultMapping[round]
+    })
+    console.log(roundData.reduce((partialSum, a) => partialSum + a, 0))
+    console.log(secondRoundData.reduce((partialSum, a) => partialSum + a, 0))
+});
